@@ -8,7 +8,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 10px;
-  background-color: #646cff;
+  background: linear-gradient(to right, #40289e, rgb(98, 21, 98));
  
 }
 #submitBtn{
@@ -36,6 +36,15 @@
   border: none;
   color: white;
   background-color:green;
+}
+#btnaccount{
+  padding:  10px 50px ;
+  margin: 10px;
+  font-size: 15px;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  background: linear-gradient(to right, #6a11cb, purple);
 }
 
 #submitBtn{
@@ -69,28 +78,151 @@
   font-weight: 600;
 
 }
+#head{
+  font-size: 50px;
+  color: white;
+  width: 40%;
+}
+#InputDiv{
+text-align: center;
+margin: auto;
+background-color: aliceblue;
+ width: 450px;
+ padding: 20px;
+ border-radius: 20px;
+ height: 450px;
+  
+}
+#contactpage{
+  width: 50%;
+  height: 400px;
+}
+#messagebox{
+  height: 100px;
+}
+
+#contactpage img{
+width: 100%;
+height: 100%;
+}
+#InputDiv2{
+  text-align: center;
+  margin: auto;
+  background-color: aliceblue;
+   width: 450px;
+   padding: 20px;
+   border-radius: 20px;
+   height: 400px;  
+  }
+  #forget{
+    color: red;
+  }
+  #InputDiv3{
+    text-align: center;
+    margin: auto;
+    background-color: aliceblue;
+     width: 450px;
+     padding: 20px;
+     border-radius: 20px;
+     height: 300px;  
+    }
+
 input{
   width: 321px;
   margin: 10px;
   border-radius: 10px;
- 
   height: 50px;
   padding:  5px 20px;
 }
+#HomePage{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 5%;
+  
+}
+#arrowRight{
+  color: white;
+  font-size: 40px;
+  position: absolute;
+  right: 40px;
+}
+
+#arrowleft{
+  color: white;
+  font-size: 40px;
+  position: absolute;
+ left: 40px;
+}
 body{
-  background-color: rgb(226, 207, 244);
+  background: linear-gradient(to right, #6a11cb, purple);
 }
 #container{
   display: flex;
   align-items: center;
-  justify-content: center;
-  background-color: #646cff;
-  padding: 20px;
-  width: 400px;
+ justify-content: center;
+ position: relative;
   margin: auto;
   text-align: center;
-  border-radius: 20px;
-  margin-top: 20px;
-  box-shadow: 0 2px 8px black;
+
  
+}
+
+@media screen and (min-width:320px) and (max-width:570px){
+  #head{
+    font-size: 10px;
+    color: white;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  input{
+    width: 230px;
+    padding:  5px 20px;
+  }
+  #InputDiv {
+    width: 300px;
+    padding: 20px;
+    border-radius: 20px;
+    height: 400px;
+}
+#HomePage{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 5%;  
+  font-size: 10px;
+}
+
+#navBarLi li {
+  margin: 0 5px;
+  font-size: 10px;
+}
+
+#InputDiv3{
+  width: 300px;
+    padding: 20px;
+    border-radius: 20px;
+    height: 300px;
+  }
+  #InputDiv2{
+    width: 300px;
+      padding: 20px;
+      border-radius: 20px;
+      height: 350px;
+    }
+  #contactpage{
+    width: 50%;
+    height: 200px;
+    margin-bottom: 40px;
+  }
+  #messagebox{
+    height: 50px;
+  }
+  
+  #contactpage img{
+  width: 100%;
+  height: 100%;
+  }
 }

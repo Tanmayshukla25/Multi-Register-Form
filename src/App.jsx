@@ -1,6 +1,10 @@
 import { useState } from 'react';
 import './App.css';
 import Header from "./Header";
+import contactimg from "./images/contactimg.png";
+import loginimg from "./images/loginimg-removebg-preview.png";
+import { FaArrowRight } from "react-icons/fa";
+import { FaArrowLeft } from "react-icons/fa";
 
 function App() {
   const [step, setStep] = useState(0);
@@ -20,33 +24,62 @@ function App() {
     
   const steps = [
     <div key={1}>
-      <h2>Step 1</h2>
-      <form>
-        <input type="text" placeholder="Enter Your Name" required /><br />
-        <input type="text" placeholder="Enter Your Father's Name" required /><br />
-      </form>
+    <div id='HomePage'>
+      <div id='head'>
+        <h1>Login & Registration Form</h1>
+      </div>
+      <div id='InputDiv'>
+        <h1>Sign-Up</h1>
+        <form action="">
+          <input type="text" placeholder='Username'/><br />
+          <input type="Email" placeholder='Email Id'/><br />
+          <input type="Password" placeholder=' Password'/><br />
+          <input type="Password" placeholder=' Confirm-Password'/><br />
+          <button id='btnaccount'>Create-Account</button>
+        </form>
+      </div>
+
+    </div>
     </div>,
 
     <div key={2}>
-      <h2>Step 2</h2>
-      <form>
-        <input type="email" placeholder="Enter Your E-mail" /><br />
-        <input type="password" placeholder="Enter Your Password" required /><br />
-      </form>
+      <div id='HomePage'>
+      <div id='contactpage'>
+      <img src={contactimg} alt="" />
+      </div>
+      <div id='InputDiv2'>
+        <h1>Contact-Us</h1>
+        <form action="">
+          <input type="Number" placeholder='Phone Number'/><br />
+          <input type="Address" placeholder='Address'/><br />
+          <input type="text" id='messagebox' placeholder='Message'/><br />
+         
+          <button id='btnaccount'>Create-Account</button>
+        </form>
+      </div>
+
+    </div>
     </div>,
 
     <div key={3}>
-      <h2>Step 3</h2>
-      <form>
-        <input type="number" placeholder="Enter Your Number" required /><br />
-        <input type="text" placeholder="Enter Your Address" required /><br />
-      </form>
-    </div>,
+        <div id='HomePage'>
+      <div id='contactpage'>
+      <img src={loginimg} alt="" />
+      </div>
+      <div id='InputDiv3'>
+        <h1>Login</h1>
+        <form action="">
+          <input type="text" placeholder='Username' required/><br />
+          <input type="Password" placeholder='Password'required/><br />
+          <button id='btnaccount'>Register</button>
+          <p>Forget <span id='forget'>Username/password</span>?</p>
+        </form>
+      </div>
 
-    <div key={4}>
-      <h2>Step 4</h2>
-      <button id="submitBtn">Registration</button>
     </div>
+    </div>
+
+   
   ];
 
  
@@ -58,16 +91,15 @@ function App() {
    <div id='container'>
    <div id="form-container">
         
-        <div id="Heading">
-          <h1>Multi Step Form</h1>
-        </div>
+       
 {steps[step]}
    
      
 
       <div>
-        {step > 0 && <button  id ="BackBtn"onClick={prevStep}>Back</button>}
-        {step < 4 && <button id='NextBtn' onClick={nextStep}>Next</button>}
+     
+        {step > 0 && <FaArrowLeft  onClick={prevStep} id='arrowleft'/>}
+        {step < 2 && <FaArrowRight onClick={nextStep} id='arrowRight' />}
       </div>
       </div>
    </div>
