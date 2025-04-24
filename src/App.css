@@ -226,3 +226,61 @@ body{
   height: 100%;
   }
 }
+
+@media screen and (min-width:560px) and (max-width:900px){
+  #head{
+    font-size: 10px;
+    color: white;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  input{
+    width: 230px;
+    padding:  5px 20px;
+  }
+  #InputDiv {
+    width: 300px;
+    padding: 20px;
+    border-radius: 20px;
+    height: 400px;
+}
+#HomePage{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 5%;  
+  font-size: 10px;
+}
+
+#navBarLi li {
+  margin: 0 5px;
+  font-size: 10px;
+}
+
+#InputDiv3{
+  width: 300px;
+    padding: 20px;
+    border-radius: 20px;
+    height: 300px;
+  }
+  #InputDiv2{
+    width: 300px;
+      padding: 20px;
+      border-radius: 20px;
+      height: 350px;
+    }
+  #contactpage{
+    width: 50%;
+    height: 200px;
+    margin-bottom: 40px;
+  }
+  #messagebox{
+    height: 50px;
+  }
+  
+  #contactpage img{
+  width: 100%;
+  height: 100%;
+  }
+}
