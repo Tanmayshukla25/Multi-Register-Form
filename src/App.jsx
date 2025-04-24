@@ -31,11 +31,11 @@ function App() {
       <div id='InputDiv'>
         <h1>Sign-Up</h1>
         <form action="">
-          <input type="text" placeholder='Username'/><br />
-          <input type="Email" placeholder='Email Id'/><br />
-          <input type="Password" placeholder=' Password'/><br />
-          <input type="Password" placeholder=' Confirm-Password'/><br />
-          <button id='btnaccount'>Create-Account</button>
+          <input type="text" placeholder='Username' required/><br />
+          <input type="Email" placeholder='Email Id' required/><br />
+          <input type="Password" placeholder=' Password' required/><br />
+          <input type="Password" placeholder=' Confirm-Password' required/><br />
+          <button id='btnaccount'>SignIn</button>
         </form>
       </div>
 
@@ -50,9 +50,9 @@ function App() {
       <div id='InputDiv2'>
         <h1>Contact-Us</h1>
         <form action="">
-          <input type="Number" placeholder='Phone Number'/><br />
-          <input type="Address" placeholder='Address'/><br />
-          <input type="text" id='messagebox' placeholder='Message'/><br />
+          <input type="Number" placeholder='Phone Number' required/><br />
+          <input type="Address" placeholder='Address' required/><br />
+          <input type="text" id='messagebox' placeholder='Message' required/><br />
          
           <button id='btnaccount'>Create-Account</button>
         </form>
