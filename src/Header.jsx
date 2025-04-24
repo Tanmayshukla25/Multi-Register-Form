@@ -12,7 +12,7 @@ function Header() {
                     <ul type="none">
                         <li><a href="">Home</a></li>
                         <li><a href="">About</a></li>
-                        <li><a href="">Contact Us</a></li>
+                        <li><a href="">Contact</a></li>
                         <li><a href="">Details</a></li>
                     </ul>
                 </div>
