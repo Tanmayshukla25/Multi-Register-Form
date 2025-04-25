@@ -336,6 +336,14 @@ body{
     width: 100%;
     margin-bottom: 15px;
   }
+  #messagebox{
+    width: 78%;
+    border: 1px solid black;
+    margin-top: 2%;
+    border-radius: 10px;
+    padding: 10px;
+    height: 50px;
+  }
   input{
     width: 230px;
     padding:  5px 20px;
@@ -412,7 +420,14 @@ body{
   margin-top: 5%;  
   font-size: 10px;
 }
-
+#messagebox{
+  width: 78%;
+  border: 1px solid black;
+  margin-top: 2%;
+  border-radius: 10px;
+  padding: 10px;
+  height: 80px;
+}
 #navBarLi li {
   margin: 0 5px;
   font-size: 10px;
