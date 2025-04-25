@@ -23,12 +23,14 @@ function App() {
     e.preventDefault();
     if (pass.value.length < 6) {
       alert("Please enter atleast 6 digit password ");
-    } else if (confpass.value.length === pass.value.length) {
+    } else if (confpass.value.length !== pass.value.length) {
       alert("Please enter correct password");
-    } else if (phone.value.length < 10) {
+    }  
+  }
+
+  function ContactBtn(params) {
+     if (phone.value.length < 10) {
       alert("Please enter atleast 10 digit Number ");
-    } else if (pass.value !== confpass.value) {
-      alert("Password are not same");
     }
   }
 
@@ -47,18 +49,13 @@ function App() {
             <br />
             <input type="Password" id="pass" placeholder=" Password" required />
             <br />
-            <input
-              type="Password"
-              id="confpass"
-              placeholder=" Confirm-Password"
-              required
-            />
+            <input type="Password"id="confpass"placeholder=" Confirm-Password"required />
             <br />
             <button id="btnaccount" onClick={SigninBtn}>
               Sign-In
             </button>
           </form>
-        </div>
+        </div>1
       </div>
     </div>,
 
@@ -70,19 +67,14 @@ function App() {
         <div id="InputDiv2">
           <h1>Contact-Us</h1>
           <form action="">
-            <input
-              type="Number"
-              id="phone"
-              placeholder="Phone Number"
-              required
-            />
+            <input type="Number" id="phone" placeholder="Phone Number" required />
             <br />
             <input type="Address" placeholder="Address" required />
             <br />
             <input type="text" id="messagebox" placeholder="Message" required />
             <br />
 
-            <button id="btnaccount" onClick={SigninBtn}>
+            <button id="btnaccount" onClick={ContactBtn}>
               Create-Account.
             </button>
           </form>
