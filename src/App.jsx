@@ -54,7 +54,7 @@ function App() {
           <input type="Address" placeholder='Address' required/><br />
           <input type="text" id='messagebox' placeholder='Message' required/><br />
          
-          <button id='btnaccount'>Create-Account</button>
+          <button id='btnaccount'>Create-Account.</button>
         </form>
       </div>
 
