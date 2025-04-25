@@ -12,6 +12,155 @@
   background: linear-gradient(to right, #40289e, rgb(98, 21, 98));
  
 }
+
+
+#arrowleft {
+  transition: transform 0.2s ease, opacity 0.3s ease;
+  opacity: 0;
+  animation: fadeIn 0.4s forwards, blink 1s infinite;
+  cursor: pointer;
+}
+
+#arrowleft:active {
+  transform: scale(0.9);
+}
+
+
+#arrowleft:hover {
+  transform: scale(1.1);
+}
+
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.2;
+  }
+}
+
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  60% {
+    transform: translateX(-10px);
+  }
+  80% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+
+@keyframes rotateIn {
+  0% {
+    opacity: 0;
+    transform: rotate(-90deg) scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+  }
+}
+
+
+
+ #arrowRight {
+  transition: transform 0.2s ease, opacity 0.3s ease;
+  opacity: 0;
+  animation: fadeIn 0.4s forwards, blink 1s infinite; 
+  cursor: pointer;
+}
+
+ #arrowRight:active {
+  transform: scale(0.9);
+}
+
+
+ #arrowRight:hover {
+  transform: scale(1.1);
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.2;
+  }
+}
+
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  60% {
+    transform: translateX(-10px);
+  }
+  80% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+
+@keyframes rotateIn {
+  0% {
+    opacity: 0;
+    transform: rotate(-90deg) scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+  }
+}
+
 #submitBtn{
   padding:  10px 50px ;
   margin: 10px;

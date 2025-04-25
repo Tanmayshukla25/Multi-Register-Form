@@ -108,7 +108,7 @@ function handleSubmit() {
             />
             <br />
             <button id="btnaccount" onClick={SigninBtn}>
-              Sign-In
+              Sign-Up
             </button>
           </form>
         </div>
@@ -133,7 +133,7 @@ function handleSubmit() {
             />
             <br />
             <button id="btnaccount" onClick={ContactBtn}>
-              Create Account
+           Add-Contact
             </button>
           </form>
         </div>
@@ -153,7 +153,7 @@ function handleSubmit() {
             <input type="password" placeholder="Password" required />
             <br />
             <button id="btnaccount" onClick={(e) => e.preventDefault()}>
-              Register
+          Login
             </button>
             <p>
               Forget <span id="forget">Username/password</span>?
@@ -174,8 +174,7 @@ function handleSubmit() {
 
           <div>
             {step > 0 && <FaArrowLeft onClick={prevStep} id="arrowleft" />}
-            {step < steps.length - 1 && (
-              <FaArrowRight onClick={nextStep} id="arrowRight" />
+            {step < steps.length - 1 && (<FaArrowRight onClick={nextStep} id="arrowRight" />
             )}
           </div>
         </div>
