@@ -19,11 +19,12 @@ function App() {
     }
   };
 
-  function SigninBtn() {
+  function SigninBtn(e) {
+    e.preventDefault();
     if (pass.value.length < 6) {
       alert("Please enter atleast 6 digit password ");
-    } else if (confpass.value.lenght === pass.value.length) {
-      alert("Please enter currect password");
+    } else if (confpass.value.length === pass.value.length) {
+      alert("Please enter correct password");
     } else if (phone.value.length < 10) {
       alert("Please enter atleast 10 digit Number ");
     } else if (pass.value !== confpass.value) {
