@@ -336,14 +336,7 @@ body{
     width: 100%;
     margin-bottom: 15px;
   }
-  #messagebox{
-    width: 78%;
-    border: 1px solid black;
-    margin-top: 2%;
-    border-radius: 10px;
-    padding: 10px;
-    height: 50px;
-  }
+
   input{
     width: 230px;
     padding:  5px 20px;
@@ -385,9 +378,10 @@ body{
     height: 200px;
     margin-bottom: 40px;
   }
-  #messagebox{
-    height: 50px;
-  }
+  #messagebox {
+    height: 74px;
+    width: 230px;
+}
   
   #contactpage img{
   width: 100%;
