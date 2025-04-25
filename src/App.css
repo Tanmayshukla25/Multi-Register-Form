@@ -161,6 +161,7 @@
   }
 }
 
+
 #submitBtn{
   padding:  10px 50px ;
   margin: 10px;
@@ -248,6 +249,11 @@ background-color: aliceblue;
   height: 400px;
 }
 #messagebox{
+  width: 78%;
+  border: 1px solid black;
+  margin-top: 2%;
+  border-radius: 10px;
+  padding: 10px;
   height: 100px;
 }
 

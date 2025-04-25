@@ -129,8 +129,9 @@ function handleSubmit() {
             <input type="text"id="Address"placeholder="Address"requiredvalue={storeData.Address}onChange={handelClick}
             />
             <br />
-            <input type="text"id="messagebox"placeholder="Message"required value={storeData.messagebox}onChange={handelClick}
-            />
+
+            <textarea name="" id="messagebox"placeholder="Message"required value={storeData.messagebox}onChange={handelClick}></textarea>
+        
             <br />
             <button id="btnaccount" onClick={ContactBtn}>
            Add-Contact
