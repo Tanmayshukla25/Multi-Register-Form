@@ -35,7 +35,7 @@ function App() {
           <input type="Email" placeholder='Email Id' required/><br />
           <input type="Password" placeholder=' Password' required/><br />
           <input type="Password" placeholder=' Confirm-Password' required/><br />
-          <button id='btnaccount'>SignIn</button>
+          <button id='btnaccount'>Sign-In</button>
         </form>
       </div>
 
