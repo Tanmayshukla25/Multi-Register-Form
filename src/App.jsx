@@ -4,6 +4,7 @@ import Header from "./Header";
 import contactimg from "./images/contactimg.png";
 import loginimg from "./images/loginimg-removebg-preview.png";
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 function App() {
   const [step, setStep] = useState(0);
@@ -19,13 +20,11 @@ function App() {
 
   function handelClick(e) {
     const { id, value } = e.target;
-    console.log( id);
+    console.log(id);
     setStoreData((prev) => ({
       ...prev,
       [id]: value,
     }));
-   
-    
   }
 
   function SigninBtn(e) {
@@ -48,35 +47,29 @@ function App() {
     }
   }
 
-
-
-
-function handleSubmit() {
-  let prevData = [];
-
+  function handleSubmit() {
+    let prevData = [];
 
     const stored = localStorage.getItem("userData");
     prevData = Array.isArray(JSON.parse(stored)) ? JSON.parse(stored) : [];
- 
 
-  const updatedData = [...prevData, storeData]; 
+    const updatedData = [...prevData, storeData];
 
-  localStorage.setItem("userData", JSON.stringify(updatedData));
+    localStorage.setItem("userData", JSON.stringify(updatedData));
 
-  setStoreData({
-    firstName: "",
-    email: "",
-    password: "",
-    confpass: "",
-    phone: "",
-    Address: "",
-    messagebox: "",
-  });
+    setStoreData({
+      firstName: "",
+      email: "",
+      password: "",
+      confpass: "",
+      phone: "",
+      Address: "",
+      messagebox: "",
+    });
 
-  alert("Form submitted successfully!");
-  setStep(0);
-}
-
+    alert("Form submitted successfully!");
+    setStep(0);
+  }
 
   const nextStep = () => {
     if (step < steps.length - 1) setStep(step + 1);
@@ -95,16 +88,41 @@ function handleSubmit() {
         <div id="InputDiv">
           <h1>Sign-Up</h1>
           <form>
-            <input type="text" id="firstName" placeholder="Username" required value={storeData.firstName} onChange={handelClick}
+            <input
+              type="text"
+              id="firstName"
+              placeholder="Username"
+              required
+              value={storeData.firstName}
+              onChange={handelClick}
             />
             <br />
-            <input type="email" id="email" placeholder="Email Id" required value={storeData.email} onChange={handelClick} />
+            <input
+              type="email"
+              id="email"
+              placeholder="Email Id"
+              required
+              value={storeData.email}
+              onChange={handelClick}
+            />
 
             <br />
-            <input type="password"id="password"placeholder="Password"required value={storeData.password}onChange={handelClick}
+            <input
+              type="password"
+              id="password"
+              placeholder="Password"
+              required
+              value={storeData.password}
+              onChange={handelClick}
             />
             <br />
-            <input type="password" id="confpass" placeholder="Confirm Password" required value={storeData.confpass} onChange={handelClick}
+            <input
+              type="password"
+              id="confpass"
+              placeholder="Confirm Password"
+              required
+              value={storeData.confpass}
+              onChange={handelClick}
             />
             <br />
             <button id="btnaccount" onClick={SigninBtn}>
@@ -115,7 +133,15 @@ function handleSubmit() {
       </div>
     </div>,
 
-    <div key={2}>
+    <motion.div
+      initial={{ opacity: 0, x: 300 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{
+        duration: 0.4,
+        scale: { type: "spring", visualDuration: 0.4, bounce: 0.5 },
+      }}
+      key={2}
+    >
       <div id="HomePage">
         <div id="contactpage">
           <img src={contactimg} alt="Contact" />
@@ -123,25 +149,48 @@ function handleSubmit() {
         <div id="InputDiv2">
           <h1>Contact Us</h1>
           <form>
-            <input type="tel" id="phone"placeholder="Phone Number"required value={storeData.phone}onChange={handelClick}
+            <input
+              type="tel"
+              id="phone"
+              placeholder="Phone Number"
+              required
+              value={storeData.phone}
+              onChange={handelClick}
             />
             <br />
-            <input type="text"id="Address"placeholder="Address"requiredvalue={storeData.Address}onChange={handelClick}
+            <input
+              type="text"
+              id="Address"
+              placeholder="Address"
+              requiredvalue={storeData.Address}
+              onChange={handelClick}
             />
             <br />
 
-            <textarea name="" id="messagebox"placeholder="Message"required value={storeData.messagebox}onChange={handelClick}></textarea>
-        
+            <textarea
+              name=""
+              id="messagebox"
+              placeholder="Message"
+              required
+              value={storeData.messagebox}
+              onChange={handelClick}
+            ></textarea>
+
             <br />
             <button id="btnaccount" onClick={ContactBtn}>
-           Add-Contact
+              Add-Contact
             </button>
           </form>
         </div>
       </div>
-    </div>,
+    </motion.div>,
 
-    <div key={3}>
+    <motion.div  initial={{ opacity: 0, x: 300 }}
+    animate={{ opacity: 1, x: 0 }}
+    transition={{
+      duration: 0.4,
+      scale: { type: "spring", visualDuration: 0.4, bounce: 0.5 },
+    }} key={3}>
       <div id="HomePage">
         <div id="contactpage">
           <img src={loginimg} alt="Login" />
@@ -154,7 +203,7 @@ function handleSubmit() {
             <input type="password" placeholder="Password" required />
             <br />
             <button id="btnaccount" onClick={(e) => e.preventDefault()}>
-          Login
+              Login
             </button>
             <p>
               Forget <span id="forget">Username/password</span>?
@@ -162,7 +211,7 @@ function handleSubmit() {
           </form>
         </div>
       </div>
-    </div>,
+    </motion.div>,
   ];
 
   return (
@@ -175,7 +224,8 @@ function handleSubmit() {
 
           <div>
             {step > 0 && <FaArrowLeft onClick={prevStep} id="arrowleft" />}
-            {step < steps.length - 1 && (<FaArrowRight onClick={nextStep} id="arrowRight" />
+            {step < steps.length - 1 && (
+              <FaArrowRight onClick={nextStep} id="arrowRight" />
             )}
           </div>
         </div>
